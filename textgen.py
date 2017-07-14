@@ -9,6 +9,7 @@ for letter in vowels:
 
 prompt = 'What letters do you want? Enter "v" for vowels. "c" for consonants, "l" for any letter, or another letter to use that letter. (separate letters with a space): '
 
+quantity = input("How many names do you want? ")
 input_letters = input(prompt)
 
 def pick(l):
@@ -21,7 +22,7 @@ def pick(l):
     else:
         return l
 
-for i in range(10):
+for i in range(int(quantity)):
     name = ""
     for letter in input_letters:
         name += pick(letter)
