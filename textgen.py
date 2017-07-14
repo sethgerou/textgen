@@ -7,7 +7,7 @@ consonants = copy(letters)
 for letter in vowels:
     consonants = consonants.replace(letter, "")
 
-prompt = 'What letters do you want? Enter "v" for vowels. "c" for consonants, any other key for any letter (separate letters with a space): '
+prompt = 'What letters do you want? Enter "v" for vowels. "c" for consonants, "l" for any letter, or another letter to use that letter. (separate letters with a space): '
 
 input_letters = input(prompt)
 
@@ -16,8 +16,10 @@ def pick(l):
         return random.choice(vowels)
     elif l == "c":
         return random.choice(consonants)
-    else:
+    elif l == "l":
         return random.choice(letters)
+    else:
+        return l
 
 for i in range(10):
     name = ""
